@@ -8,7 +8,7 @@ class TwpostSpider(scrapy.Spider):
     allowed_domains = ['twitter.com']
     start_urls = ['https://twitter.com']
 
-    def __init__(self, user_id='', screen_name='', count=200, since_id='', max_id='', *args, **kwargs):
+    def __init__(self, user_id='', screen_name='', count: int=200 , since_id='', max_id='', *args, **kwargs):
         super().__init__(*args, ** kwargs)
         self.param = dict(user_id = user_id, screen_name = screen_name, count = count, since_id = since_id, max_id = max_id)
 

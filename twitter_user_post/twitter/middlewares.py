@@ -93,7 +93,7 @@ class TwitterDownloaderMiddleware:
         else:
             raise TwitterError(f"user_id and screen_name are both null")
 
-        while len(tweets) < params["count"]:
+        while len(tweets) < int(params["count"]):
             if param["since_id"]:
                 params["since_id"] = param["since_id"]
             elif param["max_id"]:
