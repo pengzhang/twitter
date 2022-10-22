@@ -22,7 +22,7 @@ class TwpostSpider(scrapy.Spider):
         results = json.loads(response.body)
         for res in results :
             item = TwitterItem()
-            item['id'] = res.get('id_str')
+            item['post_id'] = res.get('id_str')
             item['full_text'] = res.get('full_text')
             item['truncated'] = res.get('truncated')
             item['display_text_range'] = res.get('display_text_range')

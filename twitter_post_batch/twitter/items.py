@@ -9,7 +9,7 @@ import scrapy
 class TwitterItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    id = scrapy.Field()
+    post_id = scrapy.Field()
     full_text = scrapy.Field()
     truncated = scrapy.Field()
     display_text_range = scrapy.Field()
