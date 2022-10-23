@@ -1,10 +1,10 @@
 import requests
 
 def get_user_info(user_id):
-	url = "http://10.103.2.18/api/tasks/run"
-	payload='{  "spider_id": "635373f41bd6764e147ead98",  "cmd": "scrapy crawl twitter_user",  "param": "-a user_id=\'' + user_id +'\'",  "mode": "random",  "priority": 1}'
+	url = "http://vp99.hanyubook.com/api/tasks/run"
+	payload='{  "spider_id": "6354e9fd145b0fb3bbda1656",  "cmd": "scrapy crawl twitter_user",  "param": "-a user_id=\'' + user_id +'\'",  "mode": "random",  "priority": 1}'
 	headers = {
-	  'Authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMzJhYmY5Yzk5M2IxYmM1ZWFkYWMzNiIsIm5iZiI6MTY2NjQxMzk1MSwidXNlcm5hbWUiOiJhZG1pbiJ9.LLJzwGk7CeydeDjiyztuP4QV7O62Z9Yn3nPMblCRkOQ',
+	  'Authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNTRlMThiOTJjYjMzYTQ3NTYyN2NiOCIsIm5iZiI6MTY2NjUwOTEwMywidXNlcm5hbWUiOiJhZG1pbiJ9.TS4Et58xSlpMI8gGeX2J-elhpKSlhs2w8n25D0zXBNo',
 	  'Content-Type': 'application/json'
 	}
 	print(payload)
