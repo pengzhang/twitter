@@ -33,3 +33,5 @@ class TwitterItem(scrapy.Item):
     retweeted = scrapy.Field()
     lang = scrapy.Field()
     created_at = scrapy.Field()
+    publish_time = scrapy.Field()
+    gather_time = scrapy.Field()

@@ -1,5 +1,6 @@
 import scrapy
 import json
+from datetime import datetime, timezone, timedelta
 from twitter.twapi import get_api
 from twitter.items import TwitterItem
 
@@ -46,6 +47,10 @@ class TwpostSpider(scrapy.Spider):
             item['retweeted'] = res.get('retweeted')
             item['lang'] = res.get('lang')
             item['created_at'] = res.get('created_at')
+            # Sat Oct 15 12:48:22 +0000 2022
+            date_time = datetime.strptime(item['created_at'], '%a %b %d %H:%M:%S %z %Y')
+            item['publish_time'] = date_time.strftime("%Y-%m-%d %H:%M:%S")
+            item['gather_time'] = datetime.now(timezone(timedelta(hours=+8))).strftime("%Y-%m-%d %H:%M:%S")
             items.append(item)
         return items
 
