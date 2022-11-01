@@ -1,10 +1,10 @@
 import requests
 
 def get_user_post(user_id):
-	url = "http://vp99.hanyubook.com/api/tasks/run"
-	payload='{  "spider_id": "6354f349145b0fb3bbda1b21",  "cmd": "scrapy crawl twitter_user_post",  "param": "-a user_id=\'' + user_id +'\'",  "mode": "random",  "priority": 1}'
+	url = "http://twitter.hanyubook.com/api/tasks/run"
+	payload='{  "spider_id": "6360a0073608b3c28665bcb1",  "cmd": "scrapy crawl twitter_user_post",  "param": "-a user_id=\'' + user_id +'\'",  "mode": "random",  "priority": 1}'
 	headers = {
-	  'Authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNTRlMThiOTJjYjMzYTQ3NTYyN2NiOCIsIm5iZiI6MTY2NjUwOTEwMywidXNlcm5hbWUiOiJhZG1pbiJ9.TS4Et58xSlpMI8gGeX2J-elhpKSlhs2w8n25D0zXBNo',
+	  'Authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNWU0OTE5MzYwOGIzYzI4NjY1YmM1MSIsIm5iZiI6MTY2NzI3Njg3OCwidXNlcm5hbWUiOiJjcGphZG1pbiJ9.hupkSLIyZK6P67Zen6NIAZaBr_5MmqAre4KtUQ43mS0',
 	  'Content-Type': 'application/json'
 	}
 	print(payload)
